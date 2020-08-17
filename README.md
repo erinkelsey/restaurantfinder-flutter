@@ -14,15 +14,19 @@ You will need Flutter installed, along with a number of dependencies for buildin
 
 To run with web, follow the instructions here: https://flutter.dev/docs/get-started/web
 
+## Zomato Setup
+
+You will need a Zomato account and API Key. Visit here to generate API Key (and create an account, if you don't have one): https://developers.zomato.com/api
+
 ## Run
 
 Run on a device (once it is connected):
 
-    $ flutter run
+    $ flutter run --dart-define=ZOMATO_API_KEY=[YOUR_ZOMATO_API_KEY]
 
 Run on a web browser (if you have installed support for running on web):
 
-    $ flutter run -d chrome
+    $ flutter run -d chrome --dart-define=ZOMATO_API_KEY=[YOUR_ZOMATO_API_KEY]
 
 ## TODO
 
