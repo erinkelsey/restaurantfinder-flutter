@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './UI/screens/main_screen.dart';
+
 void main() => runApp(RestaurantFinder());
 
 class RestaurantFinder extends StatelessWidget {
@@ -10,7 +12,7 @@ class RestaurantFinder extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: Container(),
+      home: MainScreen(),
     );
   }
 }
