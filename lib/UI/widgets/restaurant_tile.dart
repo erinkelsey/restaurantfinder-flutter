@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../DataLayer/restaurant.dart';
 import './image_container.dart';
+import '../screens/restaurant_details_screen.dart';
 
 class RestaurantTile extends StatelessWidget {
   final Restaurant restaurant;
@@ -20,6 +21,15 @@ class RestaurantTile extends StatelessWidget {
       ),
       title: Text(restaurant.name),
       trailing: Icon(Icons.keyboard_arrow_right),
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => RestaurantDetailsScreen(
+              restaurant: restaurant,
+            ),
+          ),
+        );
+      },
     );
   }
 }
