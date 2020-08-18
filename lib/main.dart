@@ -7,6 +7,7 @@ import './BLoC/favorite_bloc.dart';
 
 void main() => runApp(RestaurantFinder());
 
+/// Main entry point for app.
 class RestaurantFinder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

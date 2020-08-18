@@ -8,11 +8,15 @@ import '../widgets/restaurant_tile.dart';
 import './favorite_screen.dart';
 import './location_screen.dart';
 
+/// Widget for rendering the screen which shows the list of [Restaurant] objects
+/// in a specific [Location].
 class RestaurantScreen extends StatelessWidget {
+  /// The location to search restaurants.
   final Location location;
 
   const RestaurantScreen({Key key, @required this.location}) : super(key: key);
 
+  /// Build the main scaffold for page.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +48,7 @@ class RestaurantScreen extends StatelessWidget {
     );
   }
 
+  /// Build the search bar for the page.
   Widget _buildSearch(BuildContext context) {
     final bloc = RestaurantBloc(location);
 
@@ -69,6 +74,7 @@ class RestaurantScreen extends StatelessWidget {
     );
   }
 
+  /// Build the results based on the data in [RestaurantBloc].
   Widget _buildStreamBuilder(RestaurantBloc bloc) {
     return StreamBuilder(
       stream: bloc.stream,
@@ -92,6 +98,7 @@ class RestaurantScreen extends StatelessWidget {
     );
   }
 
+  /// Build the list of results from the search.
   Widget _buildSearchResults(List<Restaurant> results) {
     return ListView.separated(
         itemBuilder: (context, index) {

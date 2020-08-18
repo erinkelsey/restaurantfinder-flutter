@@ -2,11 +2,14 @@
 
 A simple restaurant finder app using Flutter and Dart for iOS, Android and web. This app shows how to connect network data with the BLoC Pattern.
 
-Hosted web example here:
+Hosted web example here: http://restaurant-finder-flutter.s3-website-eu-west-1.amazonaws.com
 
 ## Functionality
 
--
+- Find restaurants by location and type of food served
+- View restaurant details
+- Favorite restaurants
+- View all favorite restaurants
 
 ## Install and Setup
 

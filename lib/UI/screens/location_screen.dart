@@ -5,6 +5,7 @@ import '../../BLoC/location_query_bloc.dart';
 import '../../BLoC/location_bloc.dart';
 import '../../DataLayer/location.dart';
 
+/// Widget for building the location screen.
 class LocationScreen extends StatelessWidget {
   final bool isFullScreenDialog;
   const LocationScreen({
@@ -12,6 +13,7 @@ class LocationScreen extends StatelessWidget {
     this.isFullScreenDialog = false,
   }) : super(key: key);
 
+  /// Build the basic scaffold for the screen.
   @override
   Widget build(BuildContext context) {
     final bloc = LocationQueryBloc();
@@ -43,6 +45,10 @@ class LocationScreen extends StatelessWidget {
     );
   }
 
+  /// Widget for the streambuilder for results.
+  ///
+  /// If there are results build the results with [_buildSearchResults].
+  /// If there are no results, dispaly a message.
   Widget _buildResults(LocationQueryBloc bloc) {
     return StreamBuilder<List<Location>>(
       stream: bloc.locationStream,
@@ -60,6 +66,7 @@ class LocationScreen extends StatelessWidget {
     );
   }
 
+  /// Widget for building the search results in a list of [ListTile] objects.
   Widget _buildSearchResults(List<Location> results) {
     return ListView.separated(
       itemBuilder: (context, index) {

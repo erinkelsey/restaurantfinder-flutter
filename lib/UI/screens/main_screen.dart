@@ -6,6 +6,10 @@ import '../../DataLayer/location.dart';
 import '../../BLoC/bloc_provider.dart';
 import '../../BLoC/location_bloc.dart';
 
+/// Widget for building the main app screen.
+///
+/// Goes to [LocationScreen] if there is no [location] specified; else goes
+/// to [RestaurantScreen].
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,11 @@ import '../../DataLayer/restaurant.dart';
 import './image_container.dart';
 import '../screens/restaurant_details_screen.dart';
 
+/// Widget for displaying a [ListTile] with details for a [Restaurant].
 class RestaurantTile extends StatelessWidget {
+  /// Restaurant to display.
   final Restaurant restaurant;
+
   const RestaurantTile({
     Key key,
     @required this.restaurant,

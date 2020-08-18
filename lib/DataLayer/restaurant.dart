@@ -1,3 +1,4 @@
+/// Class for the details for a specific Zomato restaurant.
 class Restaurant {
   final String id;
   final String name;
@@ -11,6 +12,7 @@ class Restaurant {
 
   final int priceRange;
 
+  /// Getter for displaying the price in a nice format.
   String get priceDisplay {
     final buffer = StringBuffer();
     for (int i = 0; i < priceRange; i++) {
@@ -19,6 +21,7 @@ class Restaurant {
     return buffer.toString();
   }
 
+  /// Deserialize JSON into this object.
   Restaurant.fromJson(json)
       : id = json['id'],
         name = json['name'],
@@ -40,10 +43,12 @@ class Restaurant {
   int get hashCode => id.hashCode;
 }
 
+/// Class for the ratings for a specific Zomato restaurant.
 class Rating {
   final String text;
   final String average;
 
+  /// Deserialize the rating info to this object.
   Rating.fromJson(Map json)
       : text = json['rating_text'].toString(),
         average = json['aggregate_rating'].toString();

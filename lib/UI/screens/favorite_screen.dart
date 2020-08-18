@@ -5,6 +5,7 @@ import '../../BLoC/favorite_bloc.dart';
 import '../../DataLayer/restaurant.dart';
 import '../../UI/widgets/restaurant_tile.dart';
 
+/// Widget for building the screen that shows the user's favorites.
 class FavoriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
